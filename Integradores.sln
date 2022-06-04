@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integradores", "Integradores\Integradores.csproj", "{7EDE5359-9BEE-44A0-9BD1-4BB7724CD748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{21471450-DEAB-4967-995F-86F8899527A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integradores_Service", "Integradores_Service\Integradores_Service.csproj", "{C2A982E9-6451-4EE8-A60B-22C5988688C6}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Integradores_Service_Setup", "Integradores_Service_Setup\Integradores_Service_Setup.vdproj", "{90404A46-C980-40AB-8CC6-8B6D639B6729}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integradores_Configuracao", "Integradores_Configuracao\Integradores_Configuracao.csproj", "{06A92333-0779-4958-B8CA-CC93B227349B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Integradores_OlaPdv", "Integradores_OlaPdv\Integradores_OlaPdv.csproj", "{6D8505DD-AE21-4BBA-B34E-FEB1ED34EA16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EDE5359-9BEE-44A0-9BD1-4BB7724CD748}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDE5359-9BEE-44A0-9BD1-4BB7724CD748}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDE5359-9BEE-44A0-9BD1-4BB7724CD748}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDE5359-9BEE-44A0-9BD1-4BB7724CD748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21471450-DEAB-4967-995F-86F8899527A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21471450-DEAB-4967-995F-86F8899527A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21471450-DEAB-4967-995F-86F8899527A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21471450-DEAB-4967-995F-86F8899527A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2A982E9-6451-4EE8-A60B-22C5988688C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2A982E9-6451-4EE8-A60B-22C5988688C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2A982E9-6451-4EE8-A60B-22C5988688C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2A982E9-6451-4EE8-A60B-22C5988688C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90404A46-C980-40AB-8CC6-8B6D639B6729}.Debug|Any CPU.ActiveCfg = Debug
+		{90404A46-C980-40AB-8CC6-8B6D639B6729}.Release|Any CPU.ActiveCfg = Release
+		{90404A46-C980-40AB-8CC6-8B6D639B6729}.Release|Any CPU.Build.0 = Release
+		{06A92333-0779-4958-B8CA-CC93B227349B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06A92333-0779-4958-B8CA-CC93B227349B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06A92333-0779-4958-B8CA-CC93B227349B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06A92333-0779-4958-B8CA-CC93B227349B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D8505DD-AE21-4BBA-B34E-FEB1ED34EA16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D8505DD-AE21-4BBA-B34E-FEB1ED34EA16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D8505DD-AE21-4BBA-B34E-FEB1ED34EA16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D8505DD-AE21-4BBA-B34E-FEB1ED34EA16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65C614AB-8485-4A12-A330-5AEAA442AD6E}
+	EndGlobalSection
+EndGlobal

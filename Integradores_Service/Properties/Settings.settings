@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Integradores_Service.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DB_TabelaView" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">vw_tarefas_executar</Value>
+    </Setting>
+    <Setting Name="DB_Tipo" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLSRV</Value>
+    </Setting>
+    <Setting Name="DB_StringConexao" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=tcp:integrador.database.windows.net,1433;Initial Catalog=i9ativa;Persist Security Info=False;User ID=i9admin;Password=8nbzw4FFrXEzJui;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;</Value>
+    </Setting>
+    <Setting Name="Processador" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Trade2UP</Value>
+    </Setting>
+    <Setting Name="Senha_Administrador" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WebHook_Url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://localhost:7071/api/</Value>
+    </Setting>
+    <Setting Name="SegundosParaLeituras" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

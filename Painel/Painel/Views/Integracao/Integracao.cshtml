@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Painel.Models.Entidades.Integracao>
+@{
+    ViewData["Title"] = "Integração";
+}
+<h2>Integração</h2>
+<p>
+    <a asp-action="Integracao_Criar" class = "btn btn-primary btn-sm">Criar Nova Integração</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Código
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Empresa.no_Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BancoConexaoOrigem.ds_bancodados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BancoConexaoDestino.ds_bancodados)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Empresa.no_Empresa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoIntegracao.no_Tipo_Integracao)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BancoConexaoOrigem.ds_bancodados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BancoConexaoDestino.ds_bancodados)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Integracao_Editar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Detalhes", "Integracao_Detalhe", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Excluir", "Integracao_Deletar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

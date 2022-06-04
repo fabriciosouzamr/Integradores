@@ -1,0 +1,188 @@
+120|ANDRE CARVALHO DE ARAUJO - FERIAS                 |000000000|A|99
+121|ERIK PEREIRA DE SOUSA                             |000000000|A|99
+122|DOUGLAS PEREIRA DE JESUS                          |000000000|A|99
+123|PAULO CARVALHO SENA JUNIOR                        |000000000|A|99
+124|FLAVIO JUNIO LUIIZ DE OLIVEIRA                    |000000000|A|99
+125|ISAIAS DA SILVA MENDES                            |000000000|A|99
+126|RICARDO DAVID DA CONCEICAO COSTA                  |000000000|A|99
+127|JOABE DOS SANTOS BARBOSA TELES                    |000000000|A|99
+128|VANDERLEI SILVA ARAUJO                            |000000000|A|99
+129|JORGE ALBERTO MARTINS                             |000000000|A|99
+130|PEDRO HENRIQUE  ARAUJO FERREIRA                   |000000000|A|99
+131|JEDSON AUGUSTO DA COSTA                           |000000000|A|99
+132|DOUGLAS DA SILVA TEIXEIRA                         |000000000|A|99
+133|DEIVID CARLOS PEREIRA DA SILVA                    |000000000|A|99
+134|GUSTAVO AUGUSTUS DA SILVA                         |000000000|A|99
+135|RUBENS CARVALHO DE ARAUJO                         |000000000|A|99
+136|REGINALDO ANTONIO DE OLIVEIRA ASSIS               |000000000|A|99
+137|SERGIO OLIVEIRA DE MATOS                          |000000000|A|99
+138|ADAIR JOSE HILARIO                                |000000000|A|99
+139|MAYKOM                                            |000000000|A|99
+140|JOABE DOS SANTOS BARBOSA TELES                    |000000000|A|99
+152|CLIENTES SEM COMPRA - A1                          |000000000|A|99
+201|SILVIO OLIVEIRA DE SOUZA                          |000000000|A|99
+202|MARCUS VINICIUS VENTURA                           |000000000|A|99
+203|DANYELLE LUIZA DOS SANTOS E SILVA                 |000000000|A|99
+204|PAULO TAVARES DO PRADO                            |000000000|A|99
+205|DIOGO AUGUSTO COELHO PASSOS                       |000000000|A|99
+206|VAGO                                              |000000000|A|99
+220|WILLIAM RODRIGUES                                 |000000000|A|99
+221|MARCUS VINICIUS VENTURI SILVA                     |000000000|A|99
+222|FABIO DE FATIMA DOMINGOS                          |000000000|A|99
+223|VALDECY FRANCISCO DOS SANTOS                      |000000000|A|99
+224|FRANCIELE GABRIELA SANTOS MAIA                    |000000000|A|99
+225|CRISTIANO LUIZ FERREIRA                           |000000000|A|99
+226|DANIEL ALVES                                      |000000000|A|99
+227|SAMARONE ONESIMO DA SILVA                         |000000000|A|99
+300|MATHEUS FELIPE BONIFACIO                          |000000000|A|99
+301|RAFAEL LOPES                                      |000000000|A|99
+310|ALLYSSON JOSE V. MARQUES                          |000000000|A|99
+311|VAGO                                              |000000000|A|99
+313|ELISANGELA RAKEL O. GARCIA                        |000000000|A|99
+314|INATIVO                                           |000000000|A|99
+315|VAGO                                              |000000000|A|99
+316|VAGO                                              |000000000|A|99
+318|NOVA ROTA - SETE LAGOAS                           |000000000|A|99
+320|LUCIA APARECIDA                                   |000000000|A|99
+321|NATALIA SANTOS F. DUTRA                           |000000000|A|99
+350|RCA S BH - INATIVOS                               |000000000|A|99
+351|RCA S INTERIOR - INATIVOS                         |000000000|A|99
+371|ANTIGO 301                                        |000000000|A|99
+372|ANTIGO 302                                        |000000000|A|99
+401|EMPRESA - 401                                     |000000000|A|99
+402|INATIVO                                           |000000000|A|99
+403|HOTEIS                                            |000000000|A|99
+501|EMERSON  ANTONIO DE SOUZA                         |000000000|A|05
+502|MANUEL GRACIANO DE OLIVEIRA                       |000000000|A|05
+503|FABIO GERALDO                                     |000000000|A|05
+504|GUSTAVO SILVA GUEDES                              |000000000|A|05
+506|PAULO HENRIQUE FERREIRA ROBERTO                   |000000000|A|05
+507|CRISTIANO HENRIQUE JUNGLOS SIQUEIRA               |000000000|A|05
+508|VAGO                                              |000000000|A|05
+514|VAGO                                              |000000000|A|05
+515|ANGELO FIGUEREDO                                  |000000000|A|05
+516|SILVIO ANTONIO DOS SANTOS                         |000000000|A|05
+520|INATIVO                                           |000000000|A|99
+521|RINALDO ALVES FERREIRA                            |000000000|A|05
+522|GUSTAVO J SILVA                                   |000000000|A|05
+523|EMERSON FREIRE                                    |000000000|A|05
+524|FELIPE GOMES DE CASTRO                            |000000000|A|05
+525|WILLIAM MIRANDA                                   |000000000|A|05
+526|VAGO                                              |000000000|A|05
+527|VAGO                                              |000000000|A|05
+528|ANDERSON L DA SILVA                               |000000000|A|05
+529|ALEX DE FREITAS GUIMARAES                         |000000000|A|05
+530|VICTOR                                            |000000000|A|05
+531|LENNON WILLIAN SILVA SANTOS                       |000000000|A|05
+540|INATIVO                                           |000000000|A|99
+541|SERGIO MACHADO                                    |000000000|A|05
+542|MARCOS VIEIRA                                     |000000000|A|05
+543|GUILHERME                                         |000000000|A|05
+544|INATIVO                                           |000000000|A|99
+545|MARCILIO SANTOS                                   |000000000|A|05
+546|LUCAS TEIXEIRA                                    |000000000|A|05
+547|THIAGO                                            |000000000|A|05
+548|HENRIQUE ASSUNCAO                                 |000000000|A|05
+549|RAMOM AGRESTE                                     |000000000|A|05
+550|ADILSON MATOS                                     |000000000|A|05
+551|RAIRE NASCIMENTO                                  |000000000|A|05
+552|TIAGO BRAGANCA                                    |000000000|A|05
+560|JESUS FILHO                                       |000000000|A|05
+561|EDCARLO CARNEIRO                                  |000000000|A|05
+562|WISNEY FARIA DA SILVA                             |000000000|A|05
+563|LILIAN MIRANDA                                    |000000000|A|05
+564|VAGO                                              |000000000|A|05
+565|JACKSON JULIO CANTARINO DE FREITAS                |000000000|A|05
+566|SABRINA VILELA                                    |000000000|A|05
+567|SILVANO DE ALMEIDA                                |000000000|A|05
+568|CLIENTES EM STAND BY                              |000000000|A|05
+581|PAULA REGINA NEIVA                                |000000000|A|06
+582|ROMULO COSTA PINHEIRO                             |000000000|A|06
+583|SAMUEL DOS ANJOS                                  |000000000|A|06
+584|JANICE MARTINS DA SILVA RIBEIRO                   |000000000|A|06
+585|ARLEI LUIZ RODRIGUES                              |000000000|A|06
+586|ARLEY                                             |000000000|A|06
+587|VAGO                                              |000000000|A|06
+588|INATIVO                                           |000000000|A|99
+589|JONATAS FLORES                                    |000000000|A|06
+599|INTERFACE BROKER                                  |000000000|A|99
+665|DENEGADOS                                         |000000000|A|99
+666|EXCLUIR MAIS TARDE                                |000000000|A|99
+698|CLIENTE WEB - COMPRAS                             |000000000|A|99
+699|CLIENTE NOVO WEB                                  |000000000|A|99
+705|HUDSON MAXIMILIANO                                |000000000|A|02
+706|JONATHAN JUNIO DE O. GREGORIO                     |000000000|A|02
+707|THIAGO ALVES E MACIEL                             |000000000|A|02
+708|HELIO OLIVEIRA DE CARVALHO                        |000000000|A|02
+709|CLIENTES SEM COMPRA NESTLE                        |000000000|A|99
+710|LUCIANO ROBSON TEIXEIRA PIMENTA                   |000000000|A|99
+711|ADILSON LOPES                                     |000000000|A|99
+712|FELIPE DOS SANTOS REIS                            |000000000|A|99
+713|CRISTIANO ASSIS                                   |000000000|A|99
+714|VAGO                                              |000000000|A|99
+715|INTERIOR                                          |000000000|A|99
+720|VAGO                                              |000000000|A|02
+721|CELSO EDUARDO DE SOUSA                            |000000000|A|02
+722|LUCIANA PIMENTEL PERIDES                          |000000000|A|02
+723|MARIA GABRIELA DE PAULA SOUSA                     |000000000|A|02
+724|JOSE CARLOS TAVARES                               |000000000|A|02
+725|BRENO AUGUSTO BRAGA                               |000000000|A|02
+726|PRISCILA BRAGA ALMEIDA                            |000000000|A|02
+727|VAGO                                              |000000000|A|99
+728|VAGO                                              |000000000|A|99
+729|VAGO                                              |000000000|A|99
+730|VAGO                                              |000000000|A|99
+731|DIEGO SANTOS LOPES                                |000000000|A|99
+732|FABIO DA CONSOLACAO NASCIMENTO                    |000000000|A|99
+733|WANDER VINICIUS DA SILVA                          |000000000|A|99
+734|WILLIAN JACKS FLORENCIO ALVES                     |000000000|A|99
+735|AMANDA CAROLINA BATISTA GREGORIO                  |000000000|A|99
+741|CRISTIANE DOS ANJOS CARDOSO                       |000000000|A|02
+742|JHANSIS CARLOS PRIMO                              |000000000|A|02
+743|JULIANA LOPES BUENOS AIRES                        |000000000|A|02
+744|PATRICIA DE FATIMA FERREIRA                       |000000000|A|02
+745|VITOR JUNIO DA SILVA                              |000000000|A|02
+746|ARIADNA CRISTINA ALVES VIEIRA                     |000000000|A|02
+747|VAGO                                              |000000000|A|02
+750|FUNCIONARIOS - FIFO                               |000000000|A|99
+777|S SEQUENCIA                                       |000000000|A|99
+881|NOVOS CLIENTES BROKER                             |000000000|A|99
+901|BRENDO SOARES DA ROCHA                            |000000000|A|09
+902|BRUNO CARLOS DE SOUZA QUINTAO                     |000000000|A|09
+903|EMERSON VALERIO DA COSTA                          |000000000|A|09
+904|GLEIDSTON TEIXEIRA DE OLIVEIRA ALVES              |000000000|A|09
+905|GLEISON DE PAULA SA                               |000000000|A|09
+906|HELGNER RODRIGUES AMARAL DE FREITAS               |000000000|A|09
+907|JEFERSON RODRIGUES FABIANO                        |000000000|A|09
+908|LEILA APARECIDA MENDES LOUZADA                    |000000000|A|09
+909|VAGO                                              |000000000|A|09
+910|MARCELO NEVES PEREIRA                             |000000000|A|09
+911|NAYARA FERNANDA DA SILVA ALMEIDA                  |000000000|A|09
+912|SIDNEY  PEREIRA DOS SANTOS                        |000000000|A|09
+913|TIAGO SILVEIRA DA SILVA                           |000000000|A|09
+914|WELLINGTON GOMES DA SILVA                         |000000000|A|09
+915|MATHEUS TEIXEIRA DE MIRANDA                       |000000000|A|09
+919|INATIVO                                           |000000000|A|09
+920|INATIVO                                           |000000000|A|09
+921|INATIVOS PET S/ CNPJ                              |000000000|A|09
+922|INATIVOS PET                                      |000000000|A|09
+923|ROTA MC 3                                         |000000000|A|99
+924|ROTA MC 4                                         |000000000|A|09
+925|ROTA MC 5                                         |000000000|A|09
+926|INATIVOS - PROJ MC 1                              |000000000|A|09
+927|INATIVOS - PROJ MC 2                              |000000000|A|09
+928|INATIVOS - PROJ MC 3                              |000000000|A|09
+930|INATIVOS - NOTURNO                                |000000000|A|09
+951|INATIVO                                           |000000000|A|99
+952|TELE-VENDAS 2                                     |000000000|A|99
+954|VAGO                                              |000000000|A|99
+970|FIFO                                              |000000000|A|99
+972|ANDRE LUIZ                                        |000000000|A|99
+990|FUNCIONARIOS                                      |000000000|A|99
+992|EDERSON DE JESUS CREPALDI                         |000000000|A|99
+993|VALNEI                                            |000000000|A|99
+994|WERISTEM PIMENTA DE ALMEIDA                       |000000000|A|99
+995|ANTONIO CLAUDIO COUTINHO                          |000000000|A|99
+996|DIOGENES STENIO                                   |000000000|A|99
+998|EDER CALDEIRA SOARES LIMA                         |000000000|A|99
+999|EMPRESA                                           |000000000|A|99

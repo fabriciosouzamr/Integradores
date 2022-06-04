@@ -1,0 +1,42 @@
+﻿@model Painel.Models.Entidades.Empresa
+
+@{
+    ViewData["Title"] = "Empresa - Editar";
+}
+
+<h2>Empresa - Editar</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Empresa_Editar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="CodEmpresa" class="control-label"></label>
+                <input asp-for="CodEmpresa" class="form-control" />
+                <span asp-validation-for="CodEmpresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="no_Empresa" class="control-label"></label>
+                <input asp-for="no_Empresa" class="form-control" />
+                <span asp-validation-for="no_Empresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TokenFlexXGps" class="control-label"></label>
+                <input asp-for="TokenFlexXGps" class="form-control" />
+                <span asp-validation-for="TokenFlexXGps" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Empresa">Voltar para a listagem</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

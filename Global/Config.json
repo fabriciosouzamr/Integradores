@@ -1,0 +1,16 @@
+{
+  "Config": {
+    "dbuser": "bdtest",
+    "dbpassword": "WxA35HVmHvvH245c",
+    "host": "191.232.185.189",
+    "dbport": "3306",
+    "dbname": "botservicehomogation",
+    "table": "tbmessage",
+    "waboxapp_chat": "https://www.waboxapp.com/api/send/chat"
+  },
+
+  "flexxtools": {
+    "Usuario": "flagwhats4280en",
+    "Senha": "Odfofot59flag2344959"
+  }
+}

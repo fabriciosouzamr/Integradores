@@ -1,0 +1,31 @@
+[
+  {
+    "key": "Title",
+    "type": "FirstSingle",
+    "expression": "Title:\\s+([^\\n]+)",
+    "default": "Unknown"
+  },
+  {
+    "key": "Author",
+    "type": "FirstSingle",
+    "expression": "Author:\\s+([^\\n]+)",
+    "default": "Unknown"
+  },
+  {
+    "key": "Description",
+    "type": "FirstSingle",
+    "expression": "Description:([\\s\\S]+)Technologies used:",
+    "default": "n/a"
+  },
+  {
+    "key": "Technologies",
+    "type": "AllUnique",
+    "startKeyword": "Technologies used:",
+    "endKeyword": "Github:",
+    "expression": "\\S\\s+([^\\n]+)",
+    "default": "n/a",
+    "options": {
+      "flags": "gi"
+    }    
+  }
+]

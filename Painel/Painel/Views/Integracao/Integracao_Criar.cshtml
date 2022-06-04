@@ -1,0 +1,42 @@
+﻿@model Painel.Models.Entidades.Integracao
+
+@{
+    ViewData["Title"] = "Integração - Criar";
+}
+
+<h2>Integração - Criar</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Integracao_Criar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="idEmpresa" class="control-label">Empresa</label>
+                <select asp-for="idEmpresa" class="form-control" asp-items="@ViewBag.Empresa"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="idTipoIntegracao" class="control-label">Tipo de Integração</label>
+                <select asp-for="idTipoIntegracao" class="form-control" asp-items="@ViewBag.TipoIntegracao"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="idBancoConexaoOrigem" class="control-label">Banco de Dados de Origem</label>
+                <select asp-for="idBancoConexaoOrigem" class="form-control" asp-items="@ViewBag.BancoDadosOrigem"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="idBancoConexaoDestino" class="control-label">Banco de Dados de Destino</label>
+                <select asp-for="idBancoConexaoDestino" class="form-control" asp-items="@ViewBag.BancoDadosDestino"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Integracao">Voltar para a listagem</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

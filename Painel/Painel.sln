@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Painel", "Painel\Painel.csproj", "{13DE52AE-8B58-4A93-AE10-4774F3373393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Painel_Net", "Painel_Net\Painel_Net.csproj", "{8C7737D2-6904-4491-86BA-69A241A7D2B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Webservice", "Webservice\Webservice.csproj", "{1EF9EC6B-E7EE-471C-B8C6-0D1808E5743B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13DE52AE-8B58-4A93-AE10-4774F3373393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13DE52AE-8B58-4A93-AE10-4774F3373393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13DE52AE-8B58-4A93-AE10-4774F3373393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13DE52AE-8B58-4A93-AE10-4774F3373393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C7737D2-6904-4491-86BA-69A241A7D2B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C7737D2-6904-4491-86BA-69A241A7D2B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C7737D2-6904-4491-86BA-69A241A7D2B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C7737D2-6904-4491-86BA-69A241A7D2B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EF9EC6B-E7EE-471C-B8C6-0D1808E5743B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EF9EC6B-E7EE-471C-B8C6-0D1808E5743B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EF9EC6B-E7EE-471C-B8C6-0D1808E5743B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EF9EC6B-E7EE-471C-B8C6-0D1808E5743B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB93D284-1103-4391-A401-1F48DBCAD1E7}
+	EndGlobalSection
+EndGlobal

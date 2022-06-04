@@ -1,0 +1,42 @@
+﻿@model Painel.Models.Entidades.Integracao
+@{
+    ViewData["Title"] = "Integração - Deletar";
+}
+<h2>Integração - Deletar</h2>
+<h3>Tem certeza de que deseja excluir essa integração?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Código
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa.no_Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.no_Empresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BancoConexaoOrigem.ds_bancodados)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BancoConexaoDestino.ds_bancodados)
+        </dd>
+    </dl>
+    <form asp-action="Integracao_Deletar">
+        <input type="submit" value="Excluir" class="btn btn-default" />
+    </form>
+</div>
+<div>
+    <br />
+    <a asp-action="Empresa">Voltar para a listagem</a>
+</div>

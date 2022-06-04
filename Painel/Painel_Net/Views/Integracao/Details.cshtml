@@ -1,0 +1,42 @@
+﻿@model Painel_Net.Models.Entidades.Integracao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Integracao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BancoConexao.ds_bancodados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BancoConexao.ds_bancodados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa.no_Empresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.no_Empresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

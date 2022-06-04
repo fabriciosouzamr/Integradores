@@ -1,0 +1,339 @@
+CREATE DEFINER=`UserSuite`@`%` PROCEDURE `sp_integrador_rotImportaPrecosPPB`(p_idEmpresa int, p_idTarefa int)
+BEGIN
+  DECLARE done INT DEFAULT FALSE;
+
+  DECLARE csr_idTarefa int;
+  DECLARE csr_idEmpresa int;
+  DECLARE csr_idTabelaPrecoFaixa int;
+  DECLARE csr_Codigo varchar(50);
+  DECLARE csr_PrecoMinimo float;
+  DECLARE csr_PrecoVenda float;
+  DECLARE csr_idFaixaInicialNova int;
+  DECLARE csr_idFaixaInicialFinalNova int;
+  DECLARE csr_idProduto int;
+  DECLARE csr_nroFaixa int;
+  DECLARE csr_PrecoFaixaInicial double;
+  DECLARE csr_PrecoFaixaFinal double;
+  DECLARE csr_idTabelaPrecoProduto int;
+  
+  DECLARE vCont int;
+  DECLARE vProtocolo char(14);
+  DECLARE vFaixa1 int;
+  DECLARE vFaixa2 int;
+  DECLARE vidProduto bigint;
+  DECLARE vPrecoExibicao varchar(20);
+  DECLARE vPrecoExibicaoUnitario varchar(20);
+  DECLARE vPrecoVendaUnitario decimal(18, 4);
+  DECLARE vFator_Venda decimal(18, 6);
+  DECLARE vFaixa1InicialNova double;
+  DECLARE vFaixa1InicialFinalNova int;
+  DECLARE vTextoFaixa varchar(30);
+  DECLARE vidTabelaPrecoProduto int;
+  DECLARE vPrecoFaixaInicial double;
+  DECLARE vPrecoFaixaFinal double;
+
+  DECLARE cur1 CURSOR FOR
+   select idTarefa, idEmpresa, idTabelaPrecoFaixa, Codigo, PrecoMinimo,
+          PrecoVenda, idFaixaInicialNova, idFaixaInicialFinalNova
+    from gertarefas_rotimportaprecosppbh
+    where idEmpresa = p_idEmpresa
+      and idTarefa = p_idTarefa;
+
+  DECLARE cur2 CURSOR FOR
+   select tb_produtos.idProduto
+    from tb_produtos
+     left join tb_categorias1 on tb_categorias1.idCategoria1 = tb_produtos.idCategoria1
+     left join tb_status on tb_status.idStatus = tb_produtos.idStatus
+    where tb_produtos.idEmpresa=p_idEmpresa
+      and tb_categorias1.Categoria1Ativa = 1
+      and tb_status.PermitidoVender = 1;
+
+  DECLARE cur3 CURSOR FOR
+   select nroFaixa, idTabelaPrecoProduto, PrecoFaixaInicial, PrecoFaixaFinal
+    from tb_tabela_precos_produtos_tmp;
+
+  DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE;
+  
+  DROP TEMPORARY TABLE IF EXISTS tb_tabela_precos_produtos_tmp;
+
+  CREATE TEMPORARY TABLE tb_tabela_precos_produtos_tmp
+  (
+   nroFaixa int,
+   PrecoFaixaInicial double,
+   PrecoFaixaFinal double,
+   idTabelaPrecoProduto int
+  );
+
+  set vProtocolo = DATE_FORMAT(now(), "%Y%m%d%H%i%s");
+
+  update tb_tabela_precos_produtos
+   set TextoFaixa=nroFaixa,
+       PrecoVenda=0,
+       PrecoExibicao='0.00',
+       PrecoVendaUnitario=0,
+       PrecoExibicaoUnitario = '0.00'
+   where idTabelaPreco = 4;
+
+/*
+iIdTarefa", Tipo = MySqlDbType.Int32, Valor = iIdTarefa},
+idEmpresa", Tipo = MySqlDbType.Int32, Valor = iIdEmpresa},
+idTabelaPrecoFaixa", Tipo = MySqlDbType.Int32, Valor = vCampos[6]},
+Codigo", Tipo = MySqlDbType.Int32, Valor = Convert.ToInt32(vCampos[0])},
+PrecoMinimo", Tipo = MySqlDbType.Int32, Valor = (Convert.ToDouble(vCampos[10]) / 100)},
+PrecoVenda", Tipo = MySqlDbType.Int32, Valor = (Convert.ToDouble(vCampos[10]) / 100)},
+idFaixaInicialNova", Tipo = MySqlDbType.Int32, Valor = Convert.ToInt32(vCampos[8])},
+idFaixaInicialFinalNova", Tipo = MySqlDbType.Int32, Valor = Convert.ToInt32(vCampos[9])}});
+*/
+
+  open cur1;
+
+  read_loop: loop
+    fetch cur1 into csr_idTarefa, csr_idEmpresa, csr_idTabelaPrecoFaixa, csr_Codigo,
+                    csr_PrecoMinimo, csr_PrecoVenda, csr_idFaixaInicialNova,
+                    csr_idFaixaInicialFinalNova;
+    if done then
+      leave read_loop;
+    end if;
+    
+    set vFaixa1 = csr_idTabelaPrecoFaixa;
+    set vPrecoExibicao = format(csr_PrecoVenda, 2, 'de_DE');
+    set vPrecoVendaUnitario = round(csr_PrecoVenda / vfator_venda, 2);
+    set vPrecoExibicaoUnitario = format(vPrecoVendaUnitario, 2, 'de_DE') + '/un';
+
+    select vidProduto = idProduto,
+           vfator_venda = fator_venda
+     from tb_produtos
+     where idEmpresa= p_idEmpresa
+	   and Codigo= "'" + trim(csr_Codigo) + "'";
+       
+    if ifnull(vidProduto, 0) > 0 then
+      set vFaixa1InicialNova = csr_idFaixaInicialNova;
+
+	  if vFaixa1 = 0 or vFaixa1 = 1 then
+	    if vFaixa1InicialNova < 1 then set vFaixa1InicialNova = 1; end if;
+	  elseif vFaixa1 = 2 then
+		if vFaixa1InicialNova < 2 then set vFaixa1InicialNova = 2; end if;
+	  elseif vFaixa1 = 3 then                                    
+		if vFaixa1InicialNova < 3 then set vFaixa1InicialNova = 3; end if;
+	  end if;
+
+	  set vFaixa1InicialFinalNova = csr_idFaixaInicialFinalNova;
+
+	  if vFaixa1InicialNova > vFaixa1InicialFinalNova then
+	    set vFaixa1InicialFinalNova = vFaixa1InicialNova;
+	  end if;
+
+	  if vFaixa1 = 1 then
+	    if vFaixa1InicialNova = vFaixa1InicialFinalNova then
+	      set vTextoFaixa = vFaixa1InicialNova;
+		else
+		  set vTextoFaixa = cast(vFaixa1InicialNova as char) + " a " + cast(vFaixa1InicialFinalNova as char);
+		end if;
+	  elseif vFaixa1 = 2 then
+	    if vFaixa1InicialNova = vFaixa1InicialFinalNova then
+	      set vTextoFaixa = vFaixa1InicialNova;
+		else
+		  set vTextoFaixa = cast(vFaixa1InicialNova as char) + " a " + cast(vFaixa1InicialFinalNova as char);
+		end if;
+	  elseif vFaixa1 = 3 then
+		set vTextoFaixa = cast(vFaixa1InicialNova as char) + " ou mais";
+	  else
+		set vTextoFaixa = cast(vFaixa1InicialNova as char) + " ou mais";
+	  end if;
+
+		if vFaixa1 = 1 then
+		  update tb_produtos
+		   set Preco1Venda = csr_PrecoVenda,
+			   Preco2VendaUnitario = vPrecoVendaUnitario,
+			   PrecoVendaUnitarioExib=vPrecoExibicaoUnitario,
+			   Custo=0,
+			   CustoUnitario=0
+		   where idEmpresa= p_idEmpresa
+			 and Codigo= "'" + trim(csr_Codigo) + "'";
+		end if;
+
+        select vCont = count(*)
+         from tb_tabela_precos_produtos
+         where idTabelaPreco=4
+           and idProduto=vidProduto
+           and nroFaixa=vFaixa1
+           and idUnidadeMedida=1;        
+
+		if ifnull(vCont, 0) = 0 then
+		  INSERT INTO tb_tabela_precos_produtos
+		  (idProtocolo,idTabelaPrecoFaixa,AgrupadorPreco,PrecoCusto,PrecoMinimo,
+		   PrecoVenda,PrecoExibicao,PrecoVendaUnitario,PrecoExibicaoUnitario,
+		   ValorPromocional,PrecoFaixaInicial,PrecoFaixaFinal,StatusPreco,
+		   idTabelaPreco,idProduto,nroFaixa,idUnidadeMedida)
+		  VALUES
+		  (vProtocolo,csr_idTabelaPrecoFaixa,vidProduto,0,csr_PrecoMinimo,
+		   csr_PrecoVenda,vPrecoExibicao,vPrecoVendaUnitario,vPrecoExibicaoUnitario,
+		   0,vFaixa1InicialNova,vFaixa1InicialNova,1,
+		   4,vidProduto,vFaixa1,1);
+		else
+		  update tb_tabela_precos_produtos
+		   set idProtocolo=vProtocolo,
+			   idTabelaPrecoFaixa=csr_idTabelaPrecoFaixa,
+			   AgrupadorPreco=vidProduto,
+			   PrecoCusto=0,
+			   PrecoMinimo=csr_PrecoMinimo,
+			   PrecoVenda=csr_PrecoVenda,
+			   PrecoExibicao=vPrecoExibicao,
+			   PrecoVendaUnitario=vPrecoVendaUnitario,
+			   PrecoExibicaoUnitario=vPrecoExibicaoUnitario,
+			   ValorPromocional=0,
+			   PrecoFaixaInicial=vFaixa1InicialNova,
+			   PrecoFaixaFinal=vFaixa1InicialNova,
+			   TextoFaixa=vTextoFaixa,
+			   StatusPreco=1
+		   where idTabelaPreco=4
+			 and idProduto=vidProduto
+			 and nroFaixa=vFaixa1
+			 and idUnidadeMedida=1;
+		end if;
+    end if;
+  end loop;
+  close cur1;
+
+  open cur2;
+
+  read_loop1: loop
+    fetch cur2 into csr_idProduto;
+    if done then
+      leave read_loop1;
+    end if;
+
+    delete from tb_tabela_precos_produtos_tmp;
+    
+    insert into tb_tabela_precos_produtos_tmp (nroFaixa, idTabelaPrecoProduto, PrecoFaixaInicial, PrecoFaixaFinal)
+    select nroFaixa, idTabelaPrecoProduto, PrecoFaixaInicial, PrecoFaixaFinal
+	 from tb_tabela_precos_produtos
+     where idTabelaPreco=4
+       and idProduto=csr_idProduto
+     order by nroFaixa desc;
+
+    open cur3;
+
+    read_loop2: loop
+      fetch cur3 into csr_nroFaixa, csr_idTabelaPrecoProduto, csr_PrecoFaixaInicial, csr_PrecoFaixaFinal;
+      if done then
+        leave read_loop2;
+      end if;
+
+	  if ifnull(csr_nroFaixa, 0) = 1 then                                
+        set vFaixa1 = csr_PrecoFaixaInicial;
+
+        /* Busca Precos Escalonados */
+		select vPrecoFaixaInicial = PrecoFaixaInicial,
+			   vidTabelaPrecoProduto = idTabelaPrecoProduto
+         from tb_tabela_precos_produtos
+         where idTabelaPreco=4
+           and nroFaixa=2
+           and idProduto=csr_idProduto
+         order by nroFaixa;
+
+        if ifnull(vidTabelaPrecoProduto, 0) > 0 then
+          if ((csr_PrecoFaixaFinal >= vPrecoFaixaInicial) or
+              (vPrecoFaixaInicial > 1) or
+              (vPrecoFaixaInicial - csr_PrecoFaixaFinal > 1)) then
+            set csr_PrecoFaixaFinal = vPrecoFaixaInicial - 1;
+
+            if csr_PrecoFaixaFinal < 1 then
+              set csr_PrecoFaixaFinal = 1;
+			end if;
+            if csr_PrecoFaixaInicial > csr_PrecoFaixaFinal then
+              set csr_PrecoFaixaInicial = csr_PrecoFaixaFinal;
+			end if;
+            if csr_PrecoFaixaInicial > 1 then
+              set csr_PrecoFaixaInicial = 1;
+			end if;
+            if csr_PrecoFaixaInicial = csr_PrecoFaixaFinal then
+              set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char));
+		    else
+              set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char)) + " a " + trim(cast(csr_PrecoFaixaFinal as char));
+			end if;
+
+            update tb_tabela_precos_produtos
+             set PrecoFaixaFinal=csr_PrecoFaixaFinal,
+                 PrecoFaixaInicial=csr_PrecoFaixaInicial,
+                 TextoFaixa=vTextoFaixa
+			  where idTabelaPrecoProduto=csr_idTabelaPrecoProduto;
+	      end if;
+	    end if;
+	  end if;
+
+	  if ifnull(csr_nroFaixa, 0) = 2 then
+        set vFaixa1 = csr_PrecoFaixaInicial;
+
+        /* Busca Precos Escalonados */
+        select vPrecoFaixaInicial = PrecoFaixaInicial,
+			   vPrecoFaixaFinal = PrecoFaixaFinal,
+			   vidTabelaPrecoProduto = idTabelaPrecoProduto
+		 from tb_tabela_precos_produtos
+         where idTabelaPreco=4
+           and nroFaixa=3
+           and idProduto=csr_idProduto
+         order by nroFaixa;
+
+        if ifnull(vidTabelaPrecoProduto, 0) > 0 then
+          if (csr_PrecoFaixaFinal >= vPrecoFaixaInicial) or
+             (vPrecoFaixaInicial - csr_PrecoFaixaFinal > 1) then
+			set csr_PrecoFaixaFinal = vPrecoFaixaInicial - 1;
+
+			if csr_PrecoFaixaFinal < 1 then
+			  set csr_PrecoFaixaFinal = 1;
+			end if;
+			if csr_PrecoFaixaInicial > csr_PrecoFaixaFinal then
+			  set csr_PrecoFaixaInicial = csr_PrecoFaixaFinal;
+			end if;
+			if csr_PrecoFaixaInicial = csr_PrecoFaixaFinal then
+              set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char));
+			else
+              set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char)) + " a " + trim(cast(csr_PrecoFaixaFinal as char));
+			end if;
+
+			update tb_tabela_precos_produtos
+             set PrecoFaixaFinal=csr_PrecoFaixaFinal,
+                 PrecoFaixaInicial=csr_PrecoFaixaInicial,
+                 TextoFaixa=vTextoFaixa
+             where idTabelaPrecoProduto=vidTabelaPrecoProduto;
+          end if;
+        end if;
+	  end if;
+
+	  if ifnull(csr_nroFaixa, 0) = 3 then
+        set vFaixa1 = csr_PrecoFaixaInicial;
+
+        if csr_PrecoFaixaFinal < csr_PrecoFaixaInicial then
+          set csr_PrecoFaixaFinal = csr_PrecoFaixaInicial- 1;
+		end if;
+        if csr_PrecoFaixaInicial=csr_PrecoFaixaFinal then
+          set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char)) + " ou mais";
+        else
+          set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char)) + " a " + trim(cast(csr_PrecoFaixaFinal as char));
+        end if;
+
+        update tb_tabela_precos_produtos
+         set PrecoFaixaFinal=csr_PrecoFaixaFinal,
+             TextoFaixa=vTextoFaixa
+		 where idTabelaPrecoProduto=vidTabelaPrecoProduto;
+	  elseif csr_PrecoFaixaFinal=csr_PrecoFaixaInicial then
+        if csr_PrecoFaixaInicial=csr_PrecoFaixaFinal then
+          set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char)) + " ou mais";
+        else
+          set vTextoFaixa = trim(cast(csr_PrecoFaixaInicial as char)) + " a " + trim(cast(csr_PrecoFaixaFinal as char));
+        end if;
+
+	    set vTextoFaixa = "99999999";
+
+	    update tb_tabela_precos_produtos
+		 set TextoFaixa=vTextoFaixa
+         where idTabelaPrecoProduto=vidTabelaPrecoProduto;
+	  end if;
+	end loop;
+
+    close cur3;
+  end loop;
+
+  close cur2;
+end

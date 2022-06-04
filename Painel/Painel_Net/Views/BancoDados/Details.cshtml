@@ -1,0 +1,42 @@
+﻿@model Painel_Net.Models.Entidades.BancoDados
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BancoDados</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ds_bancodados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_bancodados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tp_bancodados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tp_bancodados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ds_stringconexao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ds_stringconexao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Painel_Net.Models.Entidades.TipoIntegracao>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.no_Tipo_Integracao)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.no_Tipo_Integracao)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_Tipo_Integracao }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_Tipo_Integracao }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_Tipo_Integracao })
+        </td>
+    </tr>
+}
+
+</table>

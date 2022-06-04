@@ -1,0 +1,79 @@
+000000001|TAB VAREJO                    
+000000002|TAB ESPECIAL                  
+000000003|Tab As Rota                   
+000000004|Super Nosso                   
+000000005|Vazia                         
+000000006|Rota Noturna - Pizzarias      
+000000007|TAB COBERTURAS                
+000000008|Promo Grandes Volumes         
+000000010|Megas Promoções               
+000000011|Aspin                         
+000000012|SUB DISTRIBUIDOR              
+000000013|TRIGOPANE                     
+000000019|Vazia                         
+000000020|VASILHAMES MC                 
+000000021|COPIA TAB 81                  
+000000022|VAZIA                         
+000000024|Teste                         
+000000025|TABELA PROMO SECA             
+000000026|TABELA PROMO LÍQUIDA          
+000000027|TABELA PROMO AS               
+000000028|TABELA PROMO REFRIGERADO      
+000000029|TABELA INTERIOR               
+000000030|VASILHAMES WM                 
+000000031|FARID                         
+000000032|Shell Select                  
+000000033|MART MINAS                    
+000000034|Will Bomboniere               
+000000035|TABELA GR                     
+000000036|Vps As Rota                   
+000000037|REDE UBERABA                  
+000000038|Promo Refr Varejo             
+000000039|Fifo                          
+000000040|Clientes Centro               
+000000041|Super Luna                    
+000000044|Formato/Multinegócios         
+000000045|DMA                           
+000000046|Azevedo                       
+000000047|Armazem Brasil                
+000000049|Tab rede ABC                  
+000000050|Guarim                        
+000000051|Verdemar                      
+000000055|SJ - Jacome                   
+000000056|Mercantil Bastos              
+000000057|Sales                         
+000000060|Magnos                        
+000000061|Kalus                         
+000000062|Pag Pouco                     
+000000063|1001 Festas                   
+000000064|Rede Mania                    
+000000065|Parnaíba                      
+000000066|União                         
+000000067|CooperOuro                    
+000000069|Tb 50 Maiores Nestlé (BLQ Seg)
+000000070|Serra do Cipo-NB 41253        
+000000071|Varejo Coberturas             
+000000072|AS Coberturas                 
+000000076|Refrigerado Coberturas        
+000000077|Interior Cobertura            
+000000078|Drogaria Araújo               
+000000079|Rede Pretes                   
+000000080|Super varejista               
+000000081|Sup. BH                       
+000000082|Delta Filmes                  
+000000083|Castanheira                   
+000000084|Bomboniere                    
+000000085|Decisão                       
+000000089|Villefort                     
+000000090|SuperSô                       
+000000091|Vazia                         
+000000092|REDE HIPER OPA                
+000000093|VAZIA                         
+000000094|VAZIA                         
+000000095|Vazia                         
+000000096|Vazia                         
+000000097|Tabela Preço Médio            
+000000098|FRETE                         
+000000099|Preço Custo                   
+000000100|Tab inventário EFD_31_12_V_254
+000000101|VAZIA -- Era Tab SITE         

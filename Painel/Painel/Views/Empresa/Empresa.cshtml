@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Painel.Models.Entidades.Empresa>
+@{
+    ViewData["Title"] = "Empresa";
+}
+<h2>Empresa</h2>
+<p>
+    <a asp-action="Empresa_Criar" class = "btn btn-primary btn-sm">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_Empresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodEmpresa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TokenFlexXGps)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_Empresa)
+            </td>
+            <th>
+                @Html.DisplayFor(modelItem => item.CodEmpresa)
+            </th>
+            <th>
+                @Html.DisplayFor(modelItem => item.TokenFlexXGps)
+            </th>
+            <td>
+                @Html.ActionLink("Editar", "Empresa_Editar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Detalhes", "Empresa_Detalhe", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Excluir", "Empresa_Deletar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,26 @@
+﻿@model Painel_Net.Models.Entidades.TipoIntegracao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoIntegracao</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.no_Tipo_Integracao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.no_Tipo_Integracao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_Tipo_Integracao }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

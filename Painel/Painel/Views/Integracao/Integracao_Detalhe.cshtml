@@ -1,0 +1,52 @@
+﻿@model Painel.Models.Entidades.Integracao
+
+@{
+    ViewData["Title"] = "Integração - Detalhe";
+}
+
+<h2>Integração - Detalhe</h2>
+
+<div>
+    <h4>Integração</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Código
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Empresa.no_Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Empresa.no_Empresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoIntegracao.no_Tipo_Integracao)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BancoConexaoOrigem.ds_bancodados)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BancoConexaoOrigem.ds_bancodados)
+        </dd>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BancoConexaoDestino.ds_bancodados)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BancoConexaoDestino.ds_bancodados)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Integracao_Editar", new { id = Model.Id }, new { @class = "btn btn-primary btn-sm" })
+</div>
+<div>
+    <br />
+    <a asp-action="Integracao">Voltar para a listagem</a>
+</div>

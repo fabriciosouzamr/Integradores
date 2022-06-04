@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Painel.Models.Entidades.Usuario>
+
+@{
+    ViewData["Title"] = "Usuário";
+}
+
+<h2>Usuário</h2>
+
+<p>
+    <a asp-action="Usuario_Criar" class="btn btn-primary btn-sm">Criar Usuário</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cd_usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.no_usuario)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tp_tipousuario)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cd_usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_usuario)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.no_tipousuario)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Usuario_Editar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Detalhes", "Usuario_Detalhe", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+                @Html.ActionLink("Excluir", "Usuario_Deletar", new { id = item.Id }, new { @class = "btn btn-primary btn-sm" })
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

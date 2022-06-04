@@ -1,0 +1,38 @@
+﻿@model Painel.Models.Entidades.Empresa
+
+@{
+    ViewData["Title"] = "Empresa - Detalhe";
+}
+
+<h2>Empresa - Detalhe</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CodEmpresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CodEmpresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.no_Empresa)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.no_Empresa)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TokenFlexXGps)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TokenFlexXGps)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Empresa_Editar", new { id = Model.Id }, new { @class = "btn btn-primary btn-sm" })
+</div>
+<div>
+    <br />
+    <a asp-action="Empresa">Voltar para a listagem</a>
+</div>

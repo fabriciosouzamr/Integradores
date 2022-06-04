@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Painel.Models.Entidades.BancoDados>
+@{
+    ViewData["Title"] = "Banco de Dados";
+}
+<h2>Banco de Dados</h2>
+<p>
+    <a asp-action="BancoDados_Criar">Criar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ds_bancodados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tp_bancodados)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ds_stringconexao)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ds_bancodados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tp_bancodados)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ds_stringconexao)
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
