@@ -67,7 +67,7 @@ namespace Teste
     {
       oBancoDados = new clsBancoDados();
 
-      oBancoDados.DBConectar("SQLSRV", "server=sql1.plugthink.com;database=i9ativa;uid=i9admin;pwd=8nbzw4FFrXEzJui");
+      oBancoDados.DBConectar("SQLSRV", "server=locahost;database=i9ativa;uid=i9admin;pwd=8nbzw4FFrXEzJui");
 
       timer1.Enabled = true;
     }
